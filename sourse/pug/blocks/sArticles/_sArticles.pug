@@ -1,0 +1,47 @@
+mixin sArticles(data)
+	// start sArticles
+	+b.SECTION.sArticles.section#sArticles&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				h1 Статьи
+			+e.row.row.row--def
+				+articleItem('about-big')
+				+articleItem('article-img')
+				+articleItem('about-big')
+				+articleItem('about-big')
+				+articleItem('about-big', 'd-none d-md-block')
+				+articleItem('article-img', 'd-none d-md-block')
+				+articleItem('about-big', 'd-none d-md-block')
+				+articleItem('article-img', 'd-none d-md-block')
+				+articleItem('about-big', 'd-none d-lg-block')
+			+puginRow()
+	// end sArticles
+
+mixin articleItem(imgName, classes)
+	.col-12.col-md-6.col-lg-4(class=classes)
+		+b.articleItem
+			+e.img(href='#')
+				img(loading="lazy" src=`img/@2x/${imgName}.jpg`)
+			+e.content
+				+e.title(href='#')
+					| Подборка эксклюзивных
+					br.d-xl-block.d-none
+					| бизнес-сувениров к Новому году
+				+e.descr Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться...
+				+e.date 13 января 2021
+				+e.btn(href='#') Подробнее
+
+mixin sSimilarArticles(data)
+	// start sArticles
+	+b.SECTION.sArticles.section#sArticles&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				h2
+					span.d-none.d-md-block Похожие статьи:
+					span.d-md-none Статьи
+			+e.row.row.row--def
+				+articleItem('about-big')
+				+articleItem('article-img')
+				+articleItem('about-big')

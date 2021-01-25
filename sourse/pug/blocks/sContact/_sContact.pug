@@ -2,8 +2,40 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			block
+			+b.section-title
+				h1 Контакты
+			+e.main-row.row.row--def
+				+e.title-col.col-md-5
+					+e.item
+						+e.i-title E-mail:
+						+e.i-mail(href='mailto:info@domain.ru') info@domain.ru
+					+e.item
+						+e.i-title Телефон:
+						+e.i-tel(href="tel:+74955405586") +7 495 540 55 86
+					+e.item
+						+e.i-title Адрес:
+						+e.i-address Москва, Проспект Мира , д. 131, оф. 3
+					+e.shedule Мы работаем с 10:00 до 19:00
+				.col-md-7.col-xl-6
+					+e.sub-title Есть вопросы или предложения? Напишите нам
+					+form-wrap
+						+input('Ваше имя', 'text' ,undefined, 'name')
+						+input('Ваш e-mail', 'email' ,undefined)
+						+input('Ваше сообщение', 'textarea' ,undefined, 'message')
+						+e.row.row.row--def
+							.col-ss-auto
+								+e.BUTTON.btn(type="button") Отправить
+							+e.poclicy-col.col
+								+customInp('align-items-center')(checked)
+									span
+										| Нажимая на кнопку “Отправить” вы даете согласие на обработку и хранение персональных данных в соответствии с
+										|
+									a(href="#") Условиями
+			//-look for yandex lazy
+			+e.map
+				#map(style="width: 100%!important; height: 100%!important;")
+				//-fallback, for Ukraine and other yandex muted countries(also preloader)
+				+e.map-img
+					img(loading="lazy" src="img/@2x/map-img.png" alt='')
 	// end sContact

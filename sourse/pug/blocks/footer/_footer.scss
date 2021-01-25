@@ -1,43 +1,125 @@
 .footer {
-		
 	margin-top: auto;
+	background-color: $gray-900;
 
-// 
-@include media-breakpoint-up(xl) {}
+	--sPT: 58px;
+	--sPB: 60px;
+	--sTPB: 36px;
+	@include media-breakpoint-up(md){
+		--sPT: 60px;
+		--sPB: 60px;
+		--sTPB: 31px;
+	}
 
-@include media-breakpoint-up(lg) {}
+	&__row{
+		@include media-breakpoint-up(sm){
+			@include roww(36px);
+		}
 
-@include media-breakpoint-up(md) {}
+		justify-content: center;
+		@include media-breakpoint-up(lg){
+			justify-content: flex-start;
+		}
 
-@include media-breakpoint-up(sm) {}
+		&--top{
+			margin-bottom: 56px;
+			@include media-breakpoint-up(lg){
+				margin-bottom: 42px;
+			}
 
-@include media-breakpoint-up(xs) {}
+			& > *{
+				@include media-breakpoint-down(ss){
+					margin-bottom: 20px;
+				}
+			}
+		}
 
+		a{
+			font-size: 16px;
+		}
+	}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+	&__logo-col{
+		@include media-breakpoint-down(lg){
+			display: flex;
+			justify-content: center;
+			margin-bottom: 57px!important;
+		}
+	}
 
+	&__logo{
+		display: flex;
+		align-items: center;
+	}
+	&__l-img{
+		width: 90px;
+		@include media-breakpoint-up(ss){
+			width: 114px;
+		}
 
-// 
-@include media-breakpoint-only(xs) {}
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+	&__l-txt{
+		font-size: 16px;
 
-@include media-breakpoint-only(sm) {}
+		line-height: 1.25;
+		@include media-breakpoint-up(lg){
+			line-height: 1.4;
+		}
 
-@include media-breakpoint-only(md) {}
+		color: $gray-600;
 
-@include media-breakpoint-only(lg) {}
+		display: flex;
+		align-items: center;
+		&:before{
+			content: '';
+			display: block;
 
-@include media-breakpoint-only(xl) {}
+			margin: 0 12px;
+			@include media-breakpoint-up(lg){
+				margin: 0 23px;
+			}
 
+			height: 36px;
+			width: 1px;
+			background-color: $gray-700;
+		}
+	}
 
-// 
-@include media-breakpoint-down(xl) {}
+	&__policy{
+		font-size: 16px;
+		line-height: (20/16);
 
-@include media-breakpoint-down(lg) {}
+		color: $gray-550;
+	}
 
-@include media-breakpoint-down(md) {}
+	//menu
+	.navMenu{
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0;
+		margin: 0;
 
-@include media-breakpoint-down(sm) {}
+		&__item{
+			margin-left: 36px;
+			&:first-child{
+				margin-left: 0;
+			}
+			padding: 0;
+		}
+		&__link{
+			padding: 0;
 
-@include media-breakpoint-down(xs) {}
+			line-height: (20/16);
+
+			color: $white;
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
 }

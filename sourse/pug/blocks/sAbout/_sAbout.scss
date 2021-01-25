@@ -1,0 +1,81 @@
+// start .sAbout
+.sAbout {
+	--sPT: 0;
+	--sPB: 83px;
+	--sTPB: 38px;
+
+	.breadcrumb{
+		margin: 28px 0 15px;
+		@include media-breakpoint-up(lg){
+			margin: 18px 0 0px;
+		}
+	}
+
+	.section-title{
+		h1, h2{
+			font-size: 36px;
+			line-height: (45/36);
+		}
+	}
+
+	//img
+	&__img-row{
+		padding-bottom: 12px;
+		@include media-breakpoint-up(lg){
+			padding-bottom: 6px;
+		}
+
+		p{
+			margin-bottom: 24px;
+		}
+	}
+	&__img-col{
+		@include media-breakpoint-down(lg){
+			margin-bottom: 46px;
+		}
+	}
+	&__img{
+		@extend .accept-ratio-frame-nh;
+		border-radius: 12px;
+		overflow: hidden;
+
+		padding-top: (310/540) * 100%;
+		@include media-breakpoint-up(lg){
+			padding-top: (320/558) * 100%;
+		}
+	}
+
+	//sm
+	&__sm-title{
+		font-weight: bold;
+		line-height: 1.5;
+
+		margin-bottom: 40px;
+	}
+	&__row-sm{
+		padding-bottom: 37px;
+		@include media-breakpoint-up(lg){
+			padding-bottom: 55px;
+		}
+	}
+	&__sm-img{
+		width: 100%;
+		@extend .accept-ratio-frame-nh;
+		padding-top: (96/170) * 100%;
+	}
+	//
+
+	&__lower-txt{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			margin-bottom: 24px;
+		}
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sAbout

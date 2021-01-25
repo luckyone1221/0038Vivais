@@ -212,7 +212,7 @@ const JSCCommon = {
 	},
 	animateScroll() {
 
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
+		$(document).on('click', ".scroll-link", function () {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
@@ -242,62 +242,184 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '012-576.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-	function whenResize() {
-		const topH = document.querySelector("header ").offsetHeight;
-		if ($(window).scrollTop() > topH) {
-			document.querySelector('.top-nav  ').classList.add('fixed');
-		} else {
-			document.querySelector('.top-nav  ').classList.remove('fixed');
-		}
+	//luckyone Js
 
-	}
+	let banerSlider = new Swiper('.baner-slider-js', {
+		loop: true,
+		slidesPerView: 'auto',
 
-	window.addEventListener('resize', () => {
-		whenResize();
-
-	}, { passive: true });
-
-	whenResize();
-
-
-	let defaultSl = {
-		spaceBetween: 0,
 		lazy: {
 			loadPrevNext: true,
 		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		loop: true,
+
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.baner-next--js',
+			prevEl: '.baner-prev--js',
 		},
 		pagination: {
-			el: ' .swiper-pagination',
+			el: '.baner-pugin--js',
 			type: 'bullets',
 			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
 		},
-	}
-
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
+	});
+	let hitSlider = new Swiper('.hit-slider-js', {
+		loop: true,
 		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+
+		//bp
+		breakpoints: {
+			0 : {
+				spaceBetween: 12,
+			},
+			768 : {
+				spaceBetween: 24,
+			},
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+
+		navigation: {
+			nextEl: '.hit-next--js',
+			prevEl: '.hit-prev--js',
+		},
+		pagination: {
+			el: '.hit-pugin--js',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
+
+	//
+	$('.catPP-btn-js').click(function (){
+		$('.catPP--js').toggleClass('active');
+		$('body').toggleClass('fixed2');
+	})
+
+	$('.close-catPP-js').click(function (){
+		$('.catPP--js').removeClass('active');
+		$('body').removeClass('fixed2');
+	})
+
+	$('.catPP--js').click(function (){
+		let target = event.target;
+
+		if (target && target.classList.contains('catPP--js')){
+			$('.catPP--js').removeClass('active');
+			$('body').removeClass('fixed2');
+		}
+	});
+	//02 category js
+	$('.catBar-head-js').click(function (){
+		$(this).toggleClass('active');
+		$('.catBar-content-js').toggleClass('active');
+
+	})
+	//03 prod card
+
+	let prodCardThumb = new Swiper('.prod-thumb-js', {
+		slidesPerView: 'auto',
+		direction: 'vertical',
+		spaceBetween: 12,
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6,
+		},
 
 	});
+	let prodCardSlider = new Swiper('.prod-slider-js', {
+		spaceBetween: 30,
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3,
+		},
+		loop: true,
+
+	});
+
+	//yandex lazy
+	window.setTimeout(function (){
+		let yandexScript = document.createElement('script');
+		yandexScript.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e27e46e9-4530-4518-b27a-3bba6a08eeff');
+		yandexScript.setAttribute('type', 'text/javascript');
+
+		document.body.appendChild(yandexScript);
+		window.setTimeout(function (){
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map('map', {
+						center: [55.832161, 37.650541],
+						zoom: 16
+					}, {
+						searchControlProvider: 'yandex#search'
+					}),
+
+					// Создаём макет содержимого.
+					MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+						'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+					),
+
+					myPlacemark = new ymaps.Placemark([55.832161, 37.650541], {
+						hintContent: 'Мeсто конференции',
+						balloonContent: '«Прибалтийская Park Inn»'
+					}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: 'img/svg/map-mark.svg',
+						// Размеры метки.
+						iconImageSize: [48, 48],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						//iconImageOffset: [-24, -48]
+						iconImageOffset: [-24, -48]
+					}),
+
+					myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+						hintContent: 'Собственный значок метки с контентом',
+						balloonContent: 'А эта — новогодняя',
+						iconContent: '12'
+					}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#imageWithContent',
+						// Своё изображение иконки метки.
+						iconImageHref: 'images/ball.png',
+						// Размеры метки.
+						iconImageSize: [48, 48],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-24, -24],
+						// Смещение слоя с содержимым относительно слоя с картинкой.
+						iconContentOffset: [15, 15],
+						// Макет содержимого.
+						iconContentLayout: MyIconContentLayout
+					});
+
+				myMap.geoObjects
+					.add(myPlacemark)
+					.add(myPlacemarkWithContent);
+			});
+		}, 1000);
+
+	}, 2000);
+
+	//end luckyone Js
+
+
 	// modal window
 
 };

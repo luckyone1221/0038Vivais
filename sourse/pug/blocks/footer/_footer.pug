@@ -1,2 +1,25 @@
 mixin footer()
-	footer.footer
+  +b.FOOTER.footer.section
+    +e.container.container
+      +e.row--top.row.align-items-center
+        +e.logo-col.col-12.col-lg
+          +e.logo(href="#")
+            +e.l-img
+              img(loading="lazy" src="img/svg/logo.svg" alt="")
+            +e.l-txt
+              | Эксклюзивные
+              |
+              br.d-lg-none
+              | бизнес-сувениры
+        .col-auto
+          a.top-strip__mail(href="mailto:info@domain.ru") info@domain.ru
+        .col-auto
+          a.top-strip__tel(href="tel:+74955405586") +7 495 540 55 86
+        .col-auto
+          a.top-strip__callback(href="#") Заказать звонок
+      +e.row.row
+        .col.d-none.d-lg-block
+          +mnu()
+        .col-auto
+          +e.policy(href="#") Политика конфиденциальности
+

@@ -1,0 +1,18 @@
+// start .sSeo
+.sSeo {
+	--sPT: 53px;
+	--sPB: 30px;
+	--sTPB: 40px;
+	@include media-breakpoint-up(md){
+		--sPT: 48px;
+		--sPB: 60px;
+		--sTPB: 25px;
+	}
+	&__txt{
+
+		p{
+			margin-bottom: 24px;
+		}
+	}
+
+} // end.sSeo

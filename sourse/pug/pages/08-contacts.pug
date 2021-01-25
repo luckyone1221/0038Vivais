@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHit/_sHit.pug
+include ../blocks/sSeo/_sSeo.pug
+include ../blocks/sCategory/_sCategory.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sDelivery/_sDelivery.pug
+include ../blocks/sArticles/_sArticles.pug
+include ../blocks/sArticle/_sArticle.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '08-contacts'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+catalogPP()
+	+header()
+		+topStrip()
+		+top-nav()
+	+sContact()
+		+breadcrumb('Главная', 'Контакты')
+	+footer()

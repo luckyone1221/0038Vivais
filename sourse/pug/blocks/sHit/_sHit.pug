@@ -1,0 +1,47 @@
+mixin sHit(title='Хиты продаж')
+	// start sHit
+	+b.SECTION.sHit.section#sHit&attributes(attributes)
+		.container
+			+b.section-title.text-center.text-lg-start
+				h2=title
+			+e.slider
+				.swiper-container.hit-slider-js
+					.swiper-wrapper
+						+hitSlide(0)
+						+hitSlide(2)
+						+hitSlide(1)
+						+hitSlide(5)
+				+b.sw-nav-row.row.justify-content-center
+					.col-auto
+						+b.hit-prev--js
+							+icon('chevron-left')
+					.col-auto
+						+b.hit-next--js
+							+icon('chevron-right')
+				+b.hit-pugin--js.d-md-flex.d-none
+
+	// end sHit
+
+mixin hitSlide(imgNumber)
+	.swiper-slide
+		+prodCardItem({
+			hit: true,
+			swiper: true,
+			imgNum: imgNumber,
+		})
+
+mixin prodCardItem(data)
+	+b.cardItem
+		if data.hit
+			+e.balls
+				+e.ball.bg-warning Хит
+		+e.img(href="#")
+			if data.swiper
+				img.swiper-lazy(src="#" data-src=`img/@2x/catalog-${data.imgNum}.jpg` alt="")
+			else
+				img(loading="lazy" src=`img/@2x/catalog-${data.imgNum}.jpg` alt="")
+		+e.txt.text-center
+			+e.title(href="#") Ручка шариковая Pin Special, белая
+			+e.articul Артикул: 345240
+			+e.price 24 000 ₽
+			+e.btn(href="#") Оставить заявку

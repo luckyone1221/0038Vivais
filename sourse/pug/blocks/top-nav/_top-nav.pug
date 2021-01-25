@@ -1,30 +1,75 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
+			+e.logo.mb-3(href="#")
+				img(loading="lazy" src="img/svg/logo.svg" alt="")
 			+mnu()
-			.text-right
-	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
+			+e.row.row.align-items-center
+				.col-auto.d-none.d-lg-block
+					+e.BUTTON.catalog-btn.catPP-btn-js
+						+e.c-burger
+							span
+						+e.txt Каталог
+				.col.col-lg-auto
+					+e.logo(href="#")
+						+e.l-img
+							img(loading="lazy" src="img/svg/logo.svg" alt="")
+						+e.l-txt.d-none.d-ss-flex
+							| Эксклюзивные
+							br
+							| бизнес-сувениры
 				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
+					+e.tel(href="tel:+74955405586") +7 495 540 55 86
+				.col-auto.d-lg-none
+					+e.BUTTON.burger.d-flex.toggle-menu-mobile--js
 						span
-				.col
+				.col.d-none.d-lg-block
 					+mnu()
 					
 	// end top-nav
+
+mixin topStrip()
+	+b.top-strip
+		.container
+			+e.row.row.align-items-center
+				.col.d-lg-none.mb-1.mb-sm-0
+					+e.BUTTON.catalog-btn.catPP-btn-js
+						+e.c-burger
+							span
+						+e.txt Каталог товаров
+				.col-12.col-sm-auto.col-lg
+					+search()
+				.col-auto.d-none.d-lg-block
+					+e.mail(href="mailto:info@domain.ru") info@domain.ru
+				.col-auto.d-none.d-lg-block
+					+e.tel(href="tel:+74955405586") +7 495 540 55 86
+				.col-auto.d-none.d-lg-block
+					+e.callback(href="#") Заказать звонок
+
+mixin search()
+	+e.search
+		+e.BUTTON.search-btn
+			+icon('search')
+		+e.INPUT.inp(type="text" placeholder="Поиск по названию товара" )
+
+mixin catalogPP()
+	+b.catPP--js
+		+e.box--js
+			+e.head.close-catPP-js
+				+icon('cross')
+			+e.items
+				+e.item(href="#") Сладкие наборы
+				+e.item(href="#") Наборы с электроникой
+				+e.item(href="#") Печатная продукция
+				+e.item(href="#") Наборы с алкоголем
+				+e.item(href="#") Ежедневники
+				+e.item(href="#") Блокноты
+				+e.item(href="#") Одежда
+				+e.item(href="#") Аксессуары

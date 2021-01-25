@@ -1,0 +1,17 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				+e.logo
+					img(loading="lazy" src="img/svg/logo.svg" alt="")
+				h1 Страница не найдена
+				p
+					| Неправильно набран адрес или такой страницы не существует.
+					|
+					br.d-none.d-ss-block
+					| Вы можете вернуться на главную страницу сайту или позвонить нам по телефону:
+					|
+					a(href='tel:+74955405586') +7 495 540 55 86
+				+e.btn(href='/') На главную
+	// end s404

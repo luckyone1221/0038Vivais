@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHit/_sHit.pug
+include ../blocks/sSeo/_sSeo.pug
+include ../blocks/sCategory/_sCategory.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '02-catalog'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+catalogPP()
+	+header()
+		+topStrip()
+		+top-nav()
+	+sCategory()
+		+breadcrumb('Главная', 'Сладкие наборы')
+	+sSeo()
+	+footer()

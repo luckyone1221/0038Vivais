@@ -1,0 +1,262 @@
+// start .sArticle
+.sArticle {
+	--sPT: 0;
+	--sTPB: 0px;
+
+	--sPB: 33px;
+	@include media-breakpoint-up(lg){
+		--sPB: 13px;
+	}
+
+	.breadcrumb{
+		li{
+			&:before{
+				content: none!important;
+			}
+		}
+
+		margin: 28px 0 31px;
+		@include media-breakpoint-up(lg){
+			margin: 18px 0 19px;
+		}
+	}
+
+	&__main-row{
+		padding-bottom: 14px;
+		@include media-breakpoint-up(lg){
+			padding-bottom: 16px;
+		}
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	.section-title{
+		color: $white;
+		position: relative;
+		z-index: 1;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+
+		height: 320px;
+		border-radius: 12px;
+		overflow: hidden;
+
+		padding: 30px;
+		margin-bottom: 48px;
+		@include media-breakpoint-up(xl){
+			padding: 22px 109px 30px;
+			margin-bottom: 41px;
+		}
+
+		&__img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+
+			background-color: $gray-900;
+
+			img{
+				opacity: .5;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		h1{
+			@include media-breakpoint-up(ss){
+				font-size: 36px;
+				line-height: (45/36);
+			}
+
+			margin-bottom: 7px;
+		}
+	}
+
+	&__txt--alone{
+		margin-bottom: 48px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 41px;
+		}
+	}
+	//img-bl
+	&__img-bl{
+		padding-bottom: 45px;
+		@include media-breakpoint-up(lg){
+			padding-bottom: 35px;
+		}
+	}
+	&__img{
+		border-radius: 12px;
+		overflow: hidden;
+		@extend .accept-ratio-frame-nh;
+
+		padding-top: (361/540) * 100%;
+		margin-bottom: 24px;
+		@include media-breakpoint-up(lg){
+			padding-top: (567/849) * 100%;
+			margin-bottom: 19px;
+		}
+	}
+	&__img-sign{
+		color: $gray-600;
+	}
+	h2{
+		@include media-breakpoint-up(ss){
+			font-size: 28px;
+			line-height: (35/28);
+		}
+
+		margin-bottom: 38px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 33px;
+		}
+	}
+	p{
+		margin-bottom: 47px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 36px;
+		}
+	}
+	h3{
+		@include media-breakpoint-up(ss){
+			font-size: 22px;
+			line-height: (28/22);
+		}
+
+		margin-bottom: 37px;
+	}
+	h4{
+		@include media-breakpoint-up(ss){
+			font-size: 18px;
+			line-height: (23/18);
+		}
+
+		margin-bottom: 37px;
+	}
+
+	ul{
+		list-style: none;
+
+		margin: 0 0 47px 0;
+		@include media-breakpoint-up(lg){
+			margin: 0 0 37px 0;
+		}
+
+		li{
+			&:before{
+				content: '—';
+				color: $primary;
+				margin-right: 4px;
+				margin-left: 1px;
+			}
+		}
+	}
+
+	h5{
+		font-size: 16px;
+		line-height: 1.25;
+
+		margin-bottom: 37px;
+	}
+
+
+	ol{
+		counter-reset: list 0;
+		list-style: none;
+		margin: 0 0 47px 0;
+		@include media-breakpoint-up(lg){
+			margin: 0 0 37px 0;
+		}
+		padding: 0;
+
+		li{
+			list-style-type: none;
+
+			&:before{
+				counter-increment: list;
+				content: counter(list) ". ";
+
+				color: $primary;
+			}
+		}
+	}
+
+	//subscribe
+	&__subscribe{
+		display: flex;
+		align-items: center;
+
+		padding: 48px 0 24px;
+		@include media-breakpoint-up(lg){
+			padding: 48px 0;
+		}
+		border-top: 1px solid $gray-250;
+	}
+	&__s-title{
+		margin-right: 12px;
+	}
+	//
+	&__{}
+	&__{}
+} // end.sArticle
+
+.social{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: -2.5px 0;
+
+	&__item{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+
+		margin-top: 2.5px;
+		margin-bottom: 2.5px;
+		margin-right: 5px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+
+		--iconFs: 15px;
+		--iconTrfm: translateX(0px) translateY(0px);
+
+		.icon{
+			font-size: 15px;
+			color: currentColor;
+		}
+
+
+		&--telg{
+			--iconFs: 15px;
+			--iconTrfm: translateX(0px) translateY(0px);
+		}
+		&--twit{
+			--iconFs: 15px;
+			--iconTrfm: translateX(0px) translateY(0px);
+		}
+		&--fb{
+			--iconFs: 15px;
+			--iconTrfm: translateX(0px) translateY(0px);
+		}
+		&--vk{
+			--iconFs: 15px;
+			--iconTrfm: translateX(0px) translateY(0px);
+		}
+	}
+
+
+	&__{}
+	&__{}
+}

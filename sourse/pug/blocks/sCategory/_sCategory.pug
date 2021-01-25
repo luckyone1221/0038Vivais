@@ -1,0 +1,108 @@
+mixin sCategory(data)
+	// start sCategory
+	+b.SECTION.sCategory.section#sCategory&attributes(attributes)
+		.container
+			block
+			.row.row--def
+				+e.sidebar-col.col-lg-3
+					+categoryBar()
+				.col-lg-9
+					+b.section-title
+						h2 Сладкие наборы
+					+e.innder-row.row.row--def
+						+categoryItem(0)
+						+categoryItem(1)
+						+categoryItem(2)
+						+categoryItem(3)
+						+categoryItem(4)
+						+categoryItem(5)
+						+categoryItem(6)
+						+categoryItem(7)
+						+categoryItem(8, 'd-sm-none d-md-block')
+					+puginRow()
+	// end sCategory
+
+mixin sCategorySearch1(data)
+	// start sCategory
+	+b.SECTION.sCategory--search.section#sCategory&attributes(attributes)
+		.container
+			block
+			.row.row--def
+				+e.sidebar-col.col-lg-3
+					+categoryBar()
+				.col-lg-9
+					+b.section-title
+						h2
+							span
+								| Ручка:
+								|
+							span.text-primary 4
+					+e.innder-row.row.row--def
+						+categoryItem(0)
+						+categoryItem(1)
+						+categoryItem(2)
+						+categoryItem(3)
+					//-+puginRow()
+
+mixin sCategorySearch2(data)
+	// start sCategory
+	+b.SECTION.sCategory--search.section#sCategory&attributes(attributes)
+		.container
+			block
+			.row.row--def
+				+e.sidebar-col.col-lg-3
+					+categoryBar()
+				.col-lg-9
+					+b.section-title
+						h2
+							span
+								| Ручка:
+								|
+							span 0
+					+e.innder-row.row.row--def
+						p Подходящих результатов не найдено.
+					//-+puginRow()
+
+mixin categoryBar()
+	+b.categoryBar
+		+e.header.catBar-head-js
+			span Категории товаров:
+		+e.content.catBar-content-js
+			+e.item(href="#") Сладкие наборы
+			+e.item(href="#") Наборы с электроникой
+			+e.item(href="#") Печатная продукция
+			+e.item(href="#") Наборы с алкоголем
+			+e.item(href="#") Ежедневники
+			+e.item(href="#") Блокноты
+			+e.item(href="#") Одежда
+			+e.item(href="#") Аксессуары
+
+mixin puginRow()
+	+b.pugin-row.row
+		.col
+			+b.pugination
+				+e.item--controll(href='#')
+					+icon('chevron-left')
+				+e.item.current(href='#') 1
+				+e.item(href='#') 2
+				+e.item(href='#') 3
+				+e.item(href='#') ...
+				+e.item(href='#') 9
+				+e.item(href='#') 10
+				+e.item(href='#') 11
+				+e.item--controll(href='#')
+					+icon('chevron-right')
+		.col-auto
+			+e.select-cont
+				+e.sel-title Показать по:
+				+e.SELECT.select.form-control.form-select
+					option 30
+					option 20
+					option 10
+
+mixin categoryItem(imgNumber, addClasses)
+	.col-12.col-ss-6.col-md-4(class=addClasses)
+		+prodCardItem({
+			hit: true,
+			imgNum: imgNumber,
+		})

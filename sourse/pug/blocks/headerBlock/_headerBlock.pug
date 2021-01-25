@@ -1,10 +1,33 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+	+b.headerBlock#headerBlock&attributes(attributes)
+		+e.slider
+			.swiper-container.baner-slider-js
+				.swiper-wrapper
+					+headerSlide(1)
+					+headerSlide(1)
+					+headerSlide(1)
+					+headerSlide(1)
+			.container
+				+b.sw-nav-row.row.justify-content-center
+					.col-auto
+						+b.baner-prev--js
+							+icon('chevron-left')
+					.col-auto
+						+b.baner-next--js
+							+icon('chevron-right')
+				+b.baner-pugin--js.d-md-flex.d-none
 	// end headerBlock
+
+mixin headerSlide(imgNum)
+	.swiper-slide
+		.container
+			+e.row.row.align-items-center
+				.col-12.col-lg-6.col-xl-auto
+					+e.img
+						img.swiper-lazy(src="" data-src=`img/@2x/head-slide-${imgNum}.png` alt="")
+				.col
+					+e.content.text-center.text-lg-start
+						h2 Новогодние скидки до 60%
+						p Как и праздники - продолжаются.
+						+e.btn(href="#") Перейти

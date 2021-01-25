@@ -1,270 +1,464 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="utf-8">
 		<title>title</title>
-		<meta name="format-detection" content="telephone=no">
-		<meta name="format-detection" content="address=no">
-		<link rel="shortcut icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
-		<!-- Стили общие для всего сайта - Начало-->
-		<link rel="stylesheet" href="vendors/swiper/swiper.min.css">
-		<link rel="stylesheet" href="vendors/fancybox/jquery.fancybox.min.css">
-		<link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.min.css">
-		<link rel="stylesheet" href="styles/main.css">
-		<!-- Стили общие для всего сайта - Конец-->
-		<!-- Стили на этой странице - Начало-->
-		<link rel="stylesheet" href="templates/blocks/main-slider/main-slider.css">
-		<link rel="stylesheet" href="templates/blocks/brend-customer-sliders/sliders.css">
-		<link rel="stylesheet" href="templates/blocks/feedback-form/feedback.css">
-		<link rel="stylesheet" href="templates/blocks/about-block/about-block.css">
-		<link rel="stylesheet" href="templates/blocks/advantage-block/advantage-block.css">
-		<!-- Стили на этой странице - Конец-->
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
-		<div class="body__inner">
-			<div class="menu-mobile menu-mobile--js d-lg-none">
-				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+		<div class="main-wrapper">
+			<div class="main-wrapper__inner"> 
+				<div class="menu-mobile menu-mobile--js d-lg-none">
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+					</div>
+					<div class="menu-mobile__inner"><a class="menu-mobile__logo mb-3" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+						<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="menu-mobile__inner">
-					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-						</li>
-					</ul>
-					<div class="text-right"></div>
+				<div class="catPP catPP--js">
+					<div class="catPP__box catPP__box--js">
+						<div class="catPP__head close-catPP-js">
+							<svg class="icon icon-cross ">
+								<use xlink:href="img/svg/sprite.svg#cross"></use>
+							</svg>
+						</div>
+						<div class="catPP__items"><a class="catPP__item" href="#">Сладкие наборы</a><a class="catPP__item" href="#">Наборы с электроникой</a><a class="catPP__item" href="#">Печатная продукция</a><a class="catPP__item" href="#">Наборы с алкоголем</a><a class="catPP__item" href="#">Ежедневники</a><a class="catPP__item" href="#">Блокноты</a><a class="catPP__item" href="#">Одежда</a><a class="catPP__item" href="#">Аксессуары</a>
+						</div>
+					</div>
 				</div>
-			</div>
-			<!--  мобильное меню-->
-			<!-- start header-->
-			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				<!-- start header-->
+				<header class="header" id="header">
+					<div class="top-strip">
+						<div class="container">
+							<div class="top-strip__row row align-items-center">
+								<div class="col d-lg-none mb-1 mb-sm-0">
+									<button class="top-strip__catalog-btn catPP-btn-js">
+										<div class="top-strip__c-burger"><span></span>
+										</div>
+										<div class="top-strip__txt">Каталог товаров
+										</div>
+									</button>
+								</div>
+								<div class="col-12 col-sm-auto col-lg">
+									<div class="top-strip__search">
+										<button class="top-strip__search-btn">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button><input class="top-strip__inp" type="text" placeholder="Поиск по названию товара"/>
+									</div>
+								</div>
+								<div class="col-auto d-none d-lg-block"><a class="top-strip__mail" href="mailto:info@domain.ru">info@domain.ru</a>
+								</div>
+								<div class="col-auto d-none d-lg-block"><a class="top-strip__tel" href="tel:+74955405586">+7 495 540 55 86</a>
+								</div>
+								<div class="col-auto d-none d-lg-block"><a class="top-strip__callback" href="#">Заказать звонок</a>
+								</div>
 							</div>
 						</div>
-						<div class="col">
-							<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-								</li>
-							</ul>
+					</div>
+					<!-- start top-nav-->
+					<div class="top-nav block-with-lazy">
+						<div class="container">
+							<div class="top-nav__row row align-items-center">
+								<div class="col-auto d-none d-lg-block">
+									<button class="top-nav__catalog-btn catPP-btn-js">
+										<div class="top-nav__c-burger"><span></span>
+										</div>
+										<div class="top-nav__txt">Каталог
+										</div>
+									</button>
+								</div>
+								<div class="col col-lg-auto"><a class="top-nav__logo" href="#"><span class="top-nav__l-img"><img loading="lazy" src="img/svg/logo.svg" alt=""/></span><span class="top-nav__l-txt d-none d-ss-flex">Эксклюзивные<br/>бизнес-сувениры</span></a>
+								</div>
+								<div class="col-auto d-lg-none"><a class="top-nav__tel" href="tel:+74955405586">+7 495 540 55 86</a>
+								</div>
+								<div class="col-auto d-lg-none">
+									<button class="top-nav__burger d-flex toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</button>
+								</div>
+								<div class="col d-none d-lg-block">
+									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end top-nav-->
+				</header>
+				<!-- end header-->
+				<!-- start headerBlock-->
+				<div class="headerBlock" id="headerBlock">
+					<div class="headerBlock__slider">
+						<div class="swiper-container baner-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="container">
+										<div class="headerBlock__row row align-items-center">
+											<div class="col-12 col-lg-6 col-xl-auto">
+												<div class="headerBlock__img"><img class="swiper-lazy" src="" data-src="img/@2x/head-slide-1.png" alt=""/>
+												</div>
+											</div>
+											<div class="col">
+												<div class="headerBlock__content text-center text-lg-start">
+													<h2>Новогодние скидки до 60%</h2>
+													<p>Как и праздники - продолжаются.</p><a class="headerBlock__btn" href="#">Перейти</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="container">
+										<div class="headerBlock__row row align-items-center">
+											<div class="col-12 col-lg-6 col-xl-auto">
+												<div class="headerBlock__img"><img class="swiper-lazy" src="" data-src="img/@2x/head-slide-1.png" alt=""/>
+												</div>
+											</div>
+											<div class="col">
+												<div class="headerBlock__content text-center text-lg-start">
+													<h2>Новогодние скидки до 60%</h2>
+													<p>Как и праздники - продолжаются.</p><a class="headerBlock__btn" href="#">Перейти</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="container">
+										<div class="headerBlock__row row align-items-center">
+											<div class="col-12 col-lg-6 col-xl-auto">
+												<div class="headerBlock__img"><img class="swiper-lazy" src="" data-src="img/@2x/head-slide-1.png" alt=""/>
+												</div>
+											</div>
+											<div class="col">
+												<div class="headerBlock__content text-center text-lg-start">
+													<h2>Новогодние скидки до 60%</h2>
+													<p>Как и праздники - продолжаются.</p><a class="headerBlock__btn" href="#">Перейти</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="container">
+										<div class="headerBlock__row row align-items-center">
+											<div class="col-12 col-lg-6 col-xl-auto">
+												<div class="headerBlock__img"><img class="swiper-lazy" src="" data-src="img/@2x/head-slide-1.png" alt=""/>
+												</div>
+											</div>
+											<div class="col">
+												<div class="headerBlock__content text-center text-lg-start">
+													<h2>Новогодние скидки до 60%</h2>
+													<p>Как и праздники - продолжаются.</p><a class="headerBlock__btn" href="#">Перейти</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="sw-nav-row row justify-content-center">
+								<div class="col-auto">
+									<div class="baner-prev baner-prev--js">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="baner-next baner-next--js">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="baner-pugin baner-pugin--js d-md-flex d-none">
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end top-nav-->
-			<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">text</span>
-			</label>
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
+				<!-- end headerBlock-->
+				<!-- start sCatalog-->
+				<section class="sCatalog section" id="sCatalog">
+					<div class="container">
+						<div class="section-title text-center text-lg-start">
+							<h2>Каталог товаров</h2>
+						</div>
+						<div class="row row--def">
+							<div class="col-6 col-lg-3"><a class="sCatalog__item text-center" href="#"><span class="sCatalog__img"><img loading="lazy" src="img/@2x/catalog-1.jpg" alt=""/></span><span class="sCatalog__title">Сладкие наборы</span><span class="sCatalog__amount">27 товаров</span></a>
+							</div>
+							<div class="col-6 col-lg-3"><a class="sCatalog__item text-center" href="#"><span class="sCatalog__img"><img loading="lazy" src="img/@2x/catalog-2.jpg" alt=""/></span><span class="sCatalog__title">Наборы с электроникой </span><span class="sCatalog__amount">32 товаров</span></a>
+							</div>
+							<div class="col-6 col-lg-3"><a class="sCatalog__item text-center" href="#"><span class="sCatalog__img"><img loading="lazy" src="img/@2x/catalog-3.jpg" alt=""/></span><span class="sCatalog__title">Печатная продукция</span><span class="sCatalog__amount">15 товаров</span></a>
+							</div>
+							<div class="col-6 col-lg-3"><a class="sCatalog__item text-center" href="#"><span class="sCatalog__img"><img loading="lazy" src="img/@2x/catalog-4.jpg" alt=""/></span><span class="sCatalog__title">Наборы с алкоголем </span><span class="sCatalog__amount">6 товаров</span></a>
+							</div>
+							<div class="col-6 col-lg-3"><a class="sCatalog__item text-center" href="#"><span class="sCatalog__img"><img loading="lazy" src="img/@2x/catalog-5.jpg" alt=""/></span><span class="sCatalog__title">Ежедневники</span><span class="sCatalog__amount">27 товаров</span></a>
+							</div>
+							<div class="col-6 col-lg-3"><a class="sCatalog__item text-center" href="#"><span class="sCatalog__img"><img loading="lazy" src="img/@2x/catalog-6.jpg" alt=""/></span><span class="sCatalog__title">Блокноты</span><span class="sCatalog__amount">32 товаров</span></a>
+							</div>
+							<div class="col-6 col-lg-3"><a class="sCatalog__item text-center" href="#"><span class="sCatalog__img"><img loading="lazy" src="img/@2x/catalog-7.jpg" alt=""/></span><span class="sCatalog__title">Одежда</span><span class="sCatalog__amount">15 товаров</span></a>
+							</div>
+							<div class="col-6 col-lg-3"><a class="sCatalog__item text-center" href="#"><span class="sCatalog__img"><img loading="lazy" src="img/@2x/catalog-8.jpg" alt=""/></span><span class="sCatalog__title">Аксессуары</span><span class="sCatalog__amount">6 товаров</span></a>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
-			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</div>
-			<!-- end headerBlock-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sContact</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end sContact-->
-			<footer>
-				<div class="footer-fixed">
-					<button class="defBtn Btn-Flamenco" id="makeOrderBtn">сделать заказ</button>
-				</div>
-				<div class="footer">
-					<div class="footer__top">
-						<div class="container">
-							<div class="footer__top-inner">
-								<ul class="def-ul">
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">Продукция</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">Трубопроводная и запорно-регулирующая арматура</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Детали трубопроводов</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Опоры трубопроводов</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Контрольно-измерительные приборы</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Отопительное оборудование</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Компенсаторы</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Уплотнители и крепеж</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Трубы</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Фитинги</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Теплоизоляция</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Канализационное оборудование</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Противопожарное оборудование</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">Услуги</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">Металлообработка</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">ППУ, ВУС, ППМ, ЦПИ изоляция</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Грунтовка и покраска металла</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Цинкование металла</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">Контакты</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">Контактная информация</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Напишите нам</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Обратный звонок</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Написать руководителю</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">О компании</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">О компании</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Новости </a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Вакансии</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">Клиентам</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">Как сделать заказ </a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Оплата</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Банковские реквизиты</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Юридическая информация </a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Статьи</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Частые вопросы</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink" href="#">Доставка</a></h3>
-										<h3><a class="defLink" href="#">Личный кабинет</a></h3>
-										<h3><a class="defLink" href="#">Бренды</a></h3>
-									</li>
-									<li class="firstStage">
-										<div class="contacts"><a class="defLink logo" href="index.html"><img src="assets/svg/logo-white.svg" alt=""/></a>
-											<ul class="def-ul">
-												<li>Пн - Пт с 09:00 до 21:00</li>
-												<li>Сб - Вс с 11:00 до 19:00</li>
-											</ul><a class="defLink h-Flamenco-1 phone" href="tel:8(495)3747472">8 (495) 374-74-72</a><a class="defLink h-Flamenco-1" href="mailto:sales@staleron-group.ru">sales@staleron-group.ru</a>
-											<ul class="def-ul social-media">
-												<li><a href="#"><img src="../../../assets/svg/social-media01.svg" alt=""/></a></li>
-												<li><a href="#"><img src="../../../assets/svg/social-media02.svg" alt=""/></a></li>
-												<li><a href="#"><img src="../../../assets/svg/social-media03.svg" alt=""/></a></li>
-												<li><a href="#"><img src="../../../assets/svg/social-media04.svg" alt=""/></a></li>
-												<li><a href="#"><img src="../../../assets/svg/social-media05.svg" alt=""/></a></li>
-											</ul>
+				</section>
+				<!-- end sCatalog-->
+				<!-- start sHit-->
+				<section class="sHit section" id="sHit">
+					<div class="container">
+						<div class="section-title text-center text-lg-start">
+							<h2>Хиты продаж</h2>
+						</div>
+						<div class="sHit__slider">
+							<div class="swiper-container hit-slider-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-0.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
 										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-2.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-1.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-5.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sw-nav-row row justify-content-center">
+								<div class="col-auto">
+									<div class="hit-prev hit-prev--js">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="hit-next hit-next--js">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="hit-pugin hit-pugin--js d-md-flex d-none">
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sHit-->
+				<!-- start sSeo-->
+				<section class="sSeo section" id="sSeo">
+					<div class="container">
+						<div class="section-title text-center text-lg-start">
+							<h2>SEO-заголовок</h2>
+						</div>
+						<div class="sSeo__txt">
+							<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."</p>
+							<p>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
+							<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."</p>
+						</div>
+					</div>
+				</section>
+				<!-- end sSeo-->
+				<footer class="footer section">
+					<div class="footer__container container">
+						<div class="footer__row footer__row--top row align-items-center">
+							<div class="footer__logo-col col-12 col-lg"><a class="footer__logo" href="#"><span class="footer__l-img"><img loading="lazy" src="img/svg/logo.svg" alt=""/></span><span class="footer__l-txt">
+								Эксклюзивные
+								<br class="d-lg-none"/>бизнес-сувениры</span></a>
+							</div>
+							<div class="col-auto"><a class="top-strip__mail" href="mailto:info@domain.ru">info@domain.ru</a></div>
+							<div class="col-auto"><a class="top-strip__tel" href="tel:+74955405586">+7 495 540 55 86</a></div>
+							<div class="col-auto"><a class="top-strip__callback" href="#">Заказать звонок</a></div>
+						</div>
+						<div class="footer__row row">
+							<div class="col d-none d-lg-block">
+								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
 									</li>
 								</ul>
 							</div>
-						</div>
-					</div>
-					<div class="footer__bottom">
-						<div class="container">
-							<div class="footer__bottom-inner">
-								<p>© ТПА24, 2019</p>
+							<div class="col-auto"><a class="footer__policy" href="#">Политика конфиденциальности</a>
 							</div>
 						</div>
 					</div>
-					<div class="anchor"><i class="icon-1-0_arrow"></i></div>
-				</div>
-			</footer>
+				</footer>
+			</div>
 		</div>
-	</body>
-	<!--  start modals-->
-	<div class="modal-win" id="modal-call" style="display: none">
-		<div class="form-wrap">
-			<form>
-				<div class="text-center">
-					<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<h4 class="form-wrap__title">Заказать звонок
+						</h4>
+						<div class="form-wrap__descr">Заполните форму и мы свяжемся с Вами в ближайшее<br/>время для уточнения деталей
+						</div>
+						<div class="form-wrap__inputs">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше имя"/>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="tel" placeholder="+7 (___)-___-__-__"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<button class="form-wrap__btn" type="submit">Заказать звонок
+						</button>
 					</div>
-					<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta at blanditiis error quis incidunt ratione. Expedita ullam repellendus possimus eos ex quidem quisquam quam voluptatum ipsa doloremque molestias accusamus rem deserunt tenetur incidunt exercitationem laboriosam consequuntur, repudiandae dolore odit earum voluptatibus autem amet! Eligendi omnis necessitatibus at accusamus excepturi, debitis magnam alias. Dolore voluptatum hic assumenda quo non facilis sed sint fugit ex quam. Natus eligendi sequi repellat earum doloremque vero consequatur repudiandae ipsam libero odit alias quia expedita magni fugit perspiciatis aperiam maxime illo, voluptatem omnis tenetur suscipit molestias beatae distinctio totam? Excepturi quaerat dolorum natus reprehenderit voluptas officiis totam recusandae harum autem ipsum laboriosam dolorem, tempore, maxime nam dignissimos aperiam cupiditate accusantium deleniti. Iusto harum facere blanditiis minima dolor assumenda error nisi soluta perferendis animi? Distinctio maxime, perspiciatis neque dignissimos reprehenderit obcaecati quo provident, dolores labore laborum adipisci at veniam reiciendis aliquam nemo minus cumque sequi quasi architecto aliquid magnam tempore expedita? Repellendus veniam est dicta nihil, aspernatur molestiae ducimus quibusdam voluptatibus saepe. Repudiandae itaque rem animi voluptas voluptate? Expedita numquam architecto totam quo quod quibusdam ut, rem earum, similique dolorum excepturi nobis quis, tempore et exercitationem repellendus! Ipsa, consequuntur praesentium quaerat excepturi voluptas, delectus maiores necessitatibus explicabo consequatur neque optio doloremque temporibus similique doloribus pariatur velit aliquam magni cum! Repellat mollitia quam saepe porro, culpa unde! Molestias laboriosam vitae nihil facere corporis cupiditate eos ea saepe dolorem, eaque laudantium quam distinctio, fugit placeat maxime enim dicta rem eligendi accusamus, eum id. Incidunt, illum quaerat ab modi iste quasi non laboriosam unde, atque fugit delectus cumque eligendi sapiente dolore autem omnis alias, adipisci dicta illo corrupti optio? Esse error numquam fugit itaque ipsam fugiat nostrum repudiandae recusandae, nobis repellat aperiam officiis labore possimus neque velit, a obcaecati illum quasi suscipit veritatis! Ea earum obcaecati impedit possimus adipisci vitae animi commodi consequatur omnis amet? Quod sed doloremque id nesciunt iure recusandae iste voluptatibus unde eligendi porro nulla architecto voluptates quasi temporibus, fugit asperiores quis! Facere non, illo quisquam cumque voluptate earum voluptatem corporis eum cum commodi omnis autem sequi nisi sit iure aperiam iusto dolor harum? Ex eligendi vero reiciendis culpa ipsa suscipit debitis, quam earum maxime. Nemo officia quasi consequuntur velit rem culpa ipsa quas earum excepturi amet fuga eum consequatur, repellendus commodi facere maxime. Magni voluptas consequatur facere dolores ut culpa, expedita fugit? Quae placeat asperiores est, fuga eligendi eius similique necessitatibus explicabo? Eveniet corporis tempora reiciendis, dolore ipsam quos aut ea alias amet nihil? Excepturi maiores mollitia inventore voluptate est ullam reprehenderit itaque iure quasi non molestias, vel veniam alias! Obcaecati laudantium ex incidunt autem ipsam a suscipit, in dolorem error deserunt minima laborum nulla facere officia sunt. Aliquid repellat rem sunt reprehenderit. Fugit perferendis officiis labore nesciunt pariatur optio minima aperiam et similique maxime odio laudantium eligendi deleniti culpa exercitationem impedit, fugiat magni vero temporibus eos obcaecati esse possimus asperiores dolores! Quod iure eius minus adipisci? Architecto sapiente corrupti error! Magni ea tempore laboriosam minus totam facilis iure voluptates nostrum officiis dignissimos nihil necessitatibus quam in, commodi molestiae expedita facere asperiores ad! Corporis delectus magnam, vel aspernatur rem laboriosam autem soluta aliquam iure impedit? Deserunt ad nam excepturi, quibusdam qui nisi necessitatibus, voluptatibus deleniti quo cumque ipsam cum repudiandae impedit in a laborum dignissimos ratione labore vitae officia quaerat magnam. Saepe ullam omnis harum reprehenderit beatae pariatur est? Animi dolores necessitatibus corrupti velit architecto obcaecati doloremque vero sapiente quaerat praesentium? Veniam illum iusto ea sunt deserunt, omnis consequatur est adipisci aliquid magnam quibusdam animi debitis magni excepturi accusamus vel facilis ipsa blanditiis expedita cumque fugiat! Aspernatur voluptatum quos corrupti blanditiis? Sapiente pariatur sunt culpa nesciunt consequatur eaque veritatis laborum possimus, saepe at nam amet exercitationem assumenda temporibus illo aliquid asperiores quae impedit beatae voluptatem? Vitae, totam quos odio nobis perferendis unde! Voluptates voluptatum, sint iure aliquid quis quod voluptatem saepe et similique, repellendus dolorum. Sed vel illo quisquam cum aut, ullam impedit quaerat a odit alias fugit repudiandae. Consequuntur voluptas explicabo eligendi, beatae esse nihil laborum illo rerum ab dolorum nemo iste est doloremque magnam. Repellendus in voluptates cumque ullam, cum odio quam deserunt optio doloremque modi nobis itaque cupiditate ea, neque exercitationem laborum, obcaecati mollitia earum debitis accusamus nisi dolorem autem libero dicta! Atque ad doloribus distinctio cumque nobis labore placeat? Necessitatibus, accusamus deleniti numquam asperiores distinctio tempora consectetur minus veritatis cum repellat architecto voluptatibus minima omnis aliquam fugit maiores eos veniam consequatur, rerum ex illo facere? Suscipit distinctio qui quae asperiores voluptates nobis unde, nisi soluta natus aspernatur tempore libero, nam iure? Modi, explicabo iusto tenetur placeat praesentium, sunt voluptatum soluta reiciendis quam atque hic dolorum in, esse consequuntur voluptate animi doloremque saepe expedita voluptates? Consectetur sint assumenda quaerat deleniti. Exercitationem, quas beatae. Ut ipsam eum nisi fugiat numquam saepe tempore dolorem necessitatibus consequatur, voluptatem eligendi magni laborum nostrum sed accusamus ducimus laudantium minus animi. Totam expedita vero voluptas libero ipsa! Facilis ullam vel libero aliquam sit itaque quasi delectus a rerum laborum, possimus, eos inventore nulla, excepturi exercitationem aliquid unde porro. Odio nulla labore repellat exercitationem cupiditate voluptates, obcaecati asperiores eligendi delectus commodi deserunt provident sit nam praesentium culpa cum amet explicabo, nisi dolores? Recusandae provident veritatis porro corporis voluptatem assumenda necessitatibus at. Sint quam in facere nihil hic cupiditate porro sapiente nisi, et ratione placeat commodi unde excepturi error repellat earum perspiciatis quisquam amet tempora. Expedita, ipsum? Molestias mollitia voluptatum sapiente inventore, perspiciatis ab laudantium, voluptatibus amet aliquid laborum autem? Adipisci aliquid voluptatum numquam quas quia ullam error sed illo, sit minima, consectetur temporibus unde? Rerum minima necessitatibus est expedita assumenda nesciunt, modi ea fugiat consectetur ad corporis velit ducimus quia aut cumque iusto voluptatibus et perferendis ipsum! Excepturi perferendis veritatis cumque quo, quod facere facilis impedit magnam numquam repellat ad tempora! Pariatur distinctio laborum, quaerat dolorem nostrum totam animi. Ipsa distinctio consectetur explicabo culpa, esse reprehenderit eveniet obcaecati, repudiandae dolorum vero expedita modi exercitationem iure aut provident sit cum adipisci consequatur id delectus voluptatum fuga ducimus natus. Cum, aperiam impedit error illo hic similique quo iure omnis ullam sapiente modi.</p>
-				</div>
-				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/> 
-				</div>
-				<!-- +e.input-wrap-->
-				<button class="form-wrap__btn btn" type="submit"> 
-				</button>
-				<div class="form-wrap__polite">
-					<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+					<label class="chb-custom align-items-center">
+						<input type="checkbox" checked="checked"/>
+						<div class="square"></div>
+						<div class="txt"><span>
+								Нажимая на кнопку “Отправить” вы даете согласие на обработку и хранение персональных данных в соответствии с
+								</span><a href="#">Условиями</a></div>
 					</label>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
-	</div>
-	<!-- #modal-call-->
-	<!-- end modals-->
-	<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
-	<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
-	<!-- modal libs-->
-	<script src="libs/jquery/jquery.slim.min.js"></script>
-	<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
-	<!-- modal libs-->
-	<!-- slider libs-->
-	<script src="libs/swiper/js/swiper.min.js"></script>
-	<!-- /slider libs-->
-	<script src="libs/inputmask/inputmask.min.js"></script>
-	<script src="js/common.js"></script>
+		<div class="modal-win" id="modal-thanks" style="display: none">
+			<div class="form-wrap text-center">
+				<h4 class="form-wrap__title">Заказать звонок
+				</h4>
+				<div class="form-wrap__descr">
+					Мы свяжемся с Вами в ближайшее время
+					<br class="d-none d-ss-block"/>для уточнения деталей
+				</div><a class="form-wrap__btn modal-close-js" href="#">Закрыть</a>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-request" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<h4 class="form-wrap__title">Оставить заявку
+						</h4>
+						<div class="form-wrap__descr">
+							Заполните форму и мы свяжемся с Вами в ближайшее
+							<br class="d-none d-ss-block"/>время для уточнения деталей
+						</div>
+						<div class="form-wrap__item-row row text-start">
+							<div class="col-auto">
+								<div class="form-wrap__i-img"><img src="img/@2x/pen-sm.jpg" alt=""/>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-wrap__i-data">Ручка шариковая Pin Special, белая
+								</div>
+								<div class="form-wrap__i-article">Артикул: 345240
+								</div>
+								<div class="form-wrap__i-price">24 000 ₽
+								</div>
+							</div>
+						</div>
+						<div class="form-wrap__inputs">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше имя"/>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="tel" placeholder="+7 (___)-___-__-__"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<button class="form-wrap__btn" type="submit">Заказать звонок
+						</button>
+					</div>
+					<label class="chb-custom align-items-center">
+						<input type="checkbox" checked="checked"/>
+						<div class="square"></div>
+						<div class="txt"><span>
+								Нажимая на кнопку “Отправить” вы даете согласие на обработку и хранение персональных данных в соответствии с
+								</span><a href="#">Условиями</a></div>
+					</label>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.slim.min.js"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
 </html>

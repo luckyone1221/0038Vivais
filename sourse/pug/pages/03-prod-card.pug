@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHit/_sHit.pug
+include ../blocks/sSeo/_sSeo.pug
+include ../blocks/sCategory/_sCategory.pug
+include ../blocks/sProdCard/_sProdCard.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '03-prod-card'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+catalogPP()
+	+header()
+		+topStrip()
+		+top-nav()
+	+sProdCard()
+		+breadcrumb('Главная', 'Сладкие наборы', 'Блокнот Excentrica, черный с голубым (голубой) 6,5x10х0,5 см')
+	+sHit('Похожие товары')
+	+footer()

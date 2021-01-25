@@ -1,29 +1,15 @@
+// start .header
+.header {
+	display: flex;
+	flex-direction: column-reverse;
+	@include media-breakpoint-up(lg){
+		flex-direction: column;
+	}
 
-	// start .header
-	.header {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
-
+	height: var(--HeadHeight);
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
 } // end.header

@@ -1,0 +1,83 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		.container
+			block
+			.d-lg-none
+				+b.section-title
+					h1
+						| Блокнот Excentrica, черный
+						|
+						br.d-none.d-sm-block
+						| с голубым (голубой)
+						|
+						br.d-none.d-sm-block
+						| 6,5x10х0,5 см
+					p Артикул: 345240
+			+e.main-row.row.row--def
+				+e.sliders-col.col-lg-6
+					+e.slider-row.row.row--def
+						.col-auto
+							+e.thumb-slider
+								.swiper-container.prod-thumb-js
+									.swiper-wrapper
+										+prodCardThumb(1)
+										+prodCardThumb(2)
+										+prodCardThumb(3)
+										+prodCardThumb(4)
+						+e.slider-col.col
+							+e.slider
+								.swiper-container.prod-slider-js
+									.swiper-wrapper
+										+prodCardSlide(1)
+										+prodCardSlide(1)
+										+prodCardSlide(1)
+										+prodCardSlide(1)
+					//prod-card-slider
+				+e.content-col.col-lg-6
+					+b.section-title.d-none.d-lg-block
+						h1
+							| Блокнот Excentrica, черный
+							br
+							| с голубым (голубой)
+							br
+							| 6,5x10х0,5 см
+						p Артикул: 345240
+					+e.table
+						+tableItem('5 баночек по 90 мл')
+						+tableItem('5 баночек по 200 мл')
+						+tableItem('3 баночки по 90 мл')
+						+tableItem('3 баночки по 200 мл')
+					+e.btn(href="#") Оставить заявку
+			//-descr
+			+e.descr
+				+e.d-header Описание
+				+e.d-items
+					+descrItem('Упаковка', 'Коробка из шпона (бук, береза).')
+					+descrItem('Наполнитель', 'Сухие целебные травы для заваривания в чай.')
+					+descrItem('Размер', 'd 20,5 x h 7,5 см')
+					+descrItem('Состав', 'В составе 3 или 5 баночек по 90 мл или 200 мл из палитры вкусов меда/крем-меда/варенья.')
+					+descrItem('Способы брендирования крышки набора', 'Гравировка, УФ, выжигание, тиснение фольгой, пленка Oracal. Полиграфичесая печать верхних этикеток баночек.')
+	// end sProdCard
+
+
+mixin descrItem(title, val)
+	+e.d-item
+		+e.d-title=title
+		+e.d-val=val
+
+mixin tableItem(name, val='24 000 ₽')
+	+e.tr.row
+		+e.t-item.col=name
+		+e.t-price.col-auto=val
+
+mixin prodCardThumb(imgNum)
+	.swiper-slide
+		+e.th-item
+			img.swiper-lazy(src="#" data-src=`img/@2x/catalog-${imgNum}.jpg` alt="")
+
+mixin prodCardSlide(imgNum)
+	.swiper-slide
+		+e.slide-img
+			+e.img-inner
+				img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-slider-${imgNum}.png` alt="")

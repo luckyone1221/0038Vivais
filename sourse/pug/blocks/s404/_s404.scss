@@ -1,0 +1,78 @@
+// start .s404
+.s404 {
+	--sTPB: 21px;
+
+	--sPT: 60px;
+	--sPB: 60px;
+	@include media-breakpoint-up(lg){
+		--sPT: 118px;
+		--sPB: 117px;
+	}
+
+	.section-title{
+		background: $white;
+		border: 1px solid $gray-250;
+		border-radius: 12px;
+
+		padding: 40px 15px;
+		@include media-breakpoint-up(ss){
+			padding: 60px 31px;
+		}
+		@include media-breakpoint-up(lg){
+			padding: 60px 125px;
+		}
+
+		&__logo{
+			display: inline-block;
+			width: 189px;
+			height: auto;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+
+			margin-bottom: 32px;
+			@include media-breakpoint-up(lg){
+				margin-bottom: 34px;
+			}
+		}
+
+		h1{
+			@include media-breakpoint-up(ss){
+				font-size: 36px;
+				line-height: (45/36);
+			}
+
+			margin-bottom: 23px;
+			@include media-breakpoint-up(lg){
+				margin-bottom: 23px;
+			}
+		}
+		p{
+			font-size: 14px;
+			line-height: 1.75;
+
+			margin-bottom: 39px;
+			@include media-breakpoint-up(lg){
+				margin-bottom: 30px;
+			}
+
+			a{
+				font-weight: bold;
+
+				color: $body-color;
+				&:hover{
+					color: $primary;
+				}
+			}
+		}
+		&__btn{
+			min-width: 218px;
+			@extend .btn;
+			@extend .btn-primary;
+		}
+	}
+
+
+} // end.s404

@@ -1,0 +1,96 @@
+// start .sArticles
+.sArticles {
+	--sPT: 0;
+	--sTPB: 37px;
+	--sPB: 60px;
+	@include media-breakpoint-up(lg){
+		--sPB: 90px;
+	}
+
+	.section-title{
+		h1, h2{
+			@include media-breakpoint-up(sm){
+				font-size: 36px;
+				line-height: (45/36);
+			}
+		}
+	}
+
+	.breadcrumb{
+		margin: 28px 0 15px;
+		@include media-breakpoint-up(lg){
+			margin: 18px 0 1px;
+		}
+	}
+
+
+	//
+	&__row{
+		padding-bottom: 48px;
+	}
+	//
+	&__{}
+	&__{}
+} // end.sArticles
+
+.articleItem{
+	background: $white;
+	border: 1px solid $gray-250;
+	border-radius: 12px;
+	overflow: hidden;
+
+	&__img{
+		@extend .accept-ratio-frame;
+
+		padding-top: 55.5%;
+		@include media-breakpoint-up(lg){
+			padding-top: (200/364) * 100%;
+		}
+	}
+	&__content{
+		padding: 28px 24px 35px;
+		@include media-breakpoint-up(lg){
+			padding: 20px 24px 23px;
+		}
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	&__title{
+		display: block;
+		font-weight: bold;
+
+		color: $body-color;
+		&:hover{
+			color: $primary;
+		}
+
+		margin-bottom: 17px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 11px;
+		}
+	}
+	&__descr{
+		color: $gray-600;
+
+		margin-bottom: 15px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 12px;
+		}
+	}
+	&__date{
+		margin-bottom: 17px;
+	}
+	&__btn{
+		margin-top: auto;
+		@extend .btn;
+		@extend .btn-primary;
+
+		min-width: 157px;
+	}
+	//
+	&__{}
+	&__{}
+}

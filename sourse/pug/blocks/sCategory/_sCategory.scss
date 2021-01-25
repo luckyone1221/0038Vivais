@@ -1,0 +1,215 @@
+// start .sCategory
+.sCategory {
+	--sPT: 0;
+	--sTPB: 37px;
+	--sPB: 10px;
+
+	&--search{
+		--sPB: 90px;
+		min-height: 627px;
+	}
+
+	.section-title{
+		@include media-breakpoint-up(lg){
+			margin-top: -9px;
+		}
+
+		h2{
+
+			@include media-breakpoint-up(sm){
+				font-size: 36px;
+				line-height: (45/36);
+			}
+
+		}
+	}
+	&__sidebar-col{
+		@include media-breakpoint-down(lg){
+			margin-bottom: 39px;
+		}
+	}
+
+	&__innder-row{
+		padding-bottom: 45px;
+	}
+	//
+	&__{}
+	&__{}
+	&__{}
+} // end.sCategory
+
+.pugination{
+	background: $white;
+
+	display: inline-flex;
+	width: auto;
+
+	&__item{
+		@include mt();
+
+		width: 34px;
+		height: 44px;
+		font-size: 14px;
+		@include media-breakpoint-up(ss){
+			font-size: 16px;
+			width: 48px;
+			height: 48px;
+		}
+
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-top: 1px solid $gray-300;
+		border-right: none;
+		border-bottom: 1px solid $gray-300;
+		border-left: 1px solid $gray-300;
+		&:last-child{
+			border-right: 1px solid $gray-300 !important;
+			border-radius: 0 5px 5px 0;
+		}
+		&:first-child{
+			border-radius: 5px 0 0 5px;
+		}
+		&:last-child{
+			border-right: none;
+		}
+
+		color: $body-color;
+		&:hover{
+			color: $body-color;
+			background-color: $gray-200;
+		}
+
+		&.current{
+			border-bottom: 1px solid $primary;
+			box-shadow: inset 0 -2px 0 -1px $primary;
+		}
+
+		&--controll{
+
+			&:hover{
+				.icon{
+					color: $primary;
+				}
+			}
+
+			.icon{
+				@include mt();
+				font-size: 12px;
+				color: $gray-550;
+			}
+		}
+
+	}
+	&__{}
+	&__{}
+}
+
+.categoryBar{
+	background: $white;
+	border: 1px solid $gray-250;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+	border-radius: 12px;
+
+	--barXpad: 24px;
+	--barYpad: 20px;
+	@include media-breakpoint-up(lg){
+		--barXpad: 16px;
+		--barYpad: 16px;
+	}
+	@include media-breakpoint-up(xl){
+		--barXpad: 24px;
+		--barYpad: 19.35px;
+	}
+
+	&__header{
+		padding: var(--barYpad) var(--barXpad);
+
+		cursor: pointer;
+		@include media-breakpoint-up(lg){
+			pointer-events: none;
+		}
+
+		font-weight: bold;
+		line-height: (20/16);
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		--chevRotate: rotateX(0deg);
+		&.active{
+			--chevRotate: rotateX(-180deg);
+		}
+
+		&:after{
+			@include mt();
+			transform: var(--chevRotate);
+
+			content: '';
+			@include media-breakpoint-up(lg){
+				content: none;
+			}
+
+			width: 14px;
+			height: 14px;
+			display: inline-block;
+
+			background-image: url(../img/svg/chevron-down-green.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+	&__content{
+		display: none;
+		&.active{
+			display: block;
+		}
+
+		@include media-breakpoint-up(lg){
+			display: block!important;
+		}
+	}
+	&__item{
+		display: block;
+		border-top: 1px solid $gray-250;
+
+		padding: var(--barYpad) var(--barXpad);
+
+		@include media-breakpoint-only(lg){
+			font-size: 15px;
+		}
+		line-height: (20/16);
+
+		color: $body-color;
+		&:hover{
+			color: $primary;
+			text-shadow: 0 0 1.1px rgba($primary, .9);
+		}
+	}
+}
+
+.pugin-row{
+	margin-bottom: -37px;
+
+	& > *{
+		margin-bottom: 37px;
+	}
+
+	//select
+	&__select-cont{
+		display: flex;
+		align-items: center;
+	}
+	&__sel-title{
+		line-height: (20/16);
+		white-space: nowrap;
+		margin-right: 13px;
+	}
+	&__select{
+		min-width: 152px;
+	}
+}

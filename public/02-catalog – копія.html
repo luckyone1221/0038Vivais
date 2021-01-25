@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>02-catalog</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body> 
+		<div class="main-wrapper">
+			<div class="main-wrapper__inner"> 
+				<div class="menu-mobile menu-mobile--js d-lg-none">
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+					</div>
+					<div class="menu-mobile__inner"><a class="menu-mobile__logo mb-3" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+						<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="catPP catPP--js">
+					<div class="catPP__box catPP__box--js">
+						<div class="catPP__head close-catPP-js">
+							<svg class="icon icon-cross ">
+								<use xlink:href="img/svg/sprite.svg#cross"></use>
+							</svg>
+						</div>
+						<div class="catPP__items"><a class="catPP__item" href="#">Сладкие наборы</a><a class="catPP__item" href="#">Наборы с электроникой</a><a class="catPP__item" href="#">Печатная продукция</a><a class="catPP__item" href="#">Наборы с алкоголем</a><a class="catPP__item" href="#">Ежедневники</a><a class="catPP__item" href="#">Блокноты</a><a class="catPP__item" href="#">Одежда</a><a class="catPP__item" href="#">Аксессуары</a>
+						</div>
+					</div>
+				</div>
+				<!-- start header-->
+				<header class="header" id="header">
+					<div class="top-strip">
+						<div class="container">
+							<div class="top-strip__row row align-items-center">
+								<div class="col d-lg-none mb-1 mb-sm-0">
+									<button class="top-strip__catalog-btn catPP-btn-js">
+										<div class="top-strip__c-burger"><span></span>
+										</div>
+										<div class="top-strip__txt">Каталог товаров
+										</div>
+									</button>
+								</div>
+								<div class="col-12 col-sm-auto col-lg">
+									<div class="top-strip__search">
+										<button class="top-strip__search-btn">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button><input class="top-strip__inp" type="text" placeholder="Поиск по названию товара"/>
+									</div>
+								</div>
+								<div class="col-auto d-none d-lg-block"><a class="top-strip__mail" href="mailto:info@domain.ru">info@domain.ru</a>
+								</div>
+								<div class="col-auto d-none d-lg-block"><a class="top-strip__tel" href="tel:+74955405586">+7 495 540 55 86</a>
+								</div>
+								<div class="col-auto d-none d-lg-block"><a class="top-strip__callback" href="#">Заказать звонок</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- start top-nav-->
+					<div class="top-nav block-with-lazy">
+						<div class="container">
+							<div class="top-nav__row row align-items-center">
+								<div class="col-auto d-none d-lg-block">
+									<button class="top-nav__catalog-btn catPP-btn-js">
+										<div class="top-nav__c-burger"><span></span>
+										</div>
+										<div class="top-nav__txt">Каталог
+										</div>
+									</button>
+								</div>
+								<div class="col col-lg-auto"><a class="top-nav__logo" href="#"><span class="top-nav__l-img"><img loading="lazy" src="img/svg/logo.svg" alt=""/></span><span class="top-nav__l-txt d-none d-ss-flex">Эксклюзивные<br/>бизнес-сувениры</span></a>
+								</div>
+								<div class="col-auto d-lg-none"><a class="top-nav__tel" href="tel:+74955405586">+7 495 540 55 86</a>
+								</div>
+								<div class="col-auto d-lg-none">
+									<button class="top-nav__burger d-flex toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</button>
+								</div>
+								<div class="col d-none d-lg-block">
+									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end top-nav-->
+				</header>
+				<!-- end header-->
+				<!-- start sCategory-->
+				<section class="sCategory section" id="sCategory">
+					<div class="container">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Сладкие наборы</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<div class="row row--def">
+							<div class="sCategory__sidebar-col col-lg-3">
+								<div class="categoryBar">
+									<div class="categoryBar__header catBar-head-js"><span>Категории товаров:</span>
+									</div>
+									<div class="categoryBar__content catBar-content-js"><a class="categoryBar__item" href="#">Сладкие наборы</a><a class="categoryBar__item" href="#">Наборы с электроникой</a><a class="categoryBar__item" href="#">Печатная продукция</a><a class="categoryBar__item" href="#">Наборы с алкоголем</a><a class="categoryBar__item" href="#">Ежедневники</a><a class="categoryBar__item" href="#">Блокноты</a><a class="categoryBar__item" href="#">Одежда</a><a class="categoryBar__item" href="#">Аксессуары</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-9">
+								<div class="section-title">
+									<h2>Сладкие наборы</h2>
+								</div>
+								<div class="sCategory__innder-row row row row--def">
+									<div class="col-12 col-ss-6 col-md-4">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-0.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-ss-6 col-md-4">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-1.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-ss-6 col-md-4">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-2.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-ss-6 col-md-4">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-3.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-ss-6 col-md-4">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-4.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-ss-6 col-md-4">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-5.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-ss-6 col-md-4">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-6.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-ss-6 col-md-4">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-7.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-ss-6 col-md-4 d-sm-none d-md-block">
+										<div class="cardItem">
+											<div class="cardItem__balls">
+												<div class="cardItem__ball bg-warning">Хит
+												</div>
+											</div><a class="cardItem__img" href="#"><img loading="lazy" src="img/@2x/catalog-8.jpg" alt=""/></a>
+											<div class="cardItem__txt text-center"><a class="cardItem__title" href="#">Ручка шариковая Pin Special, белая</a>
+												<div class="cardItem__articul">Артикул: 345240
+												</div>
+												<div class="cardItem__price">24 000 ₽
+												</div><a class="cardItem__btn" href="#">Оставить заявку</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pugin-row row">
+									<div class="col">
+										<div class="pugination"><a class="pugination__item pugination__item--controll" href="#">
+											<svg class="icon icon-chevron-left ">
+												<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+											</svg></a><a class="pugination__item current" href="#">1</a><a class="pugination__item" href="#">2</a><a class="pugination__item" href="#">3</a><a class="pugination__item" href="#">...</a><a class="pugination__item" href="#">9</a><a class="pugination__item" href="#">10</a><a class="pugination__item" href="#">11</a><a class="pugination__item pugination__item--controll" href="#">
+											<svg class="icon icon-chevron-right ">
+												<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+											</svg></a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="pugin-row__select-cont">
+											<div class="pugin-row__sel-title">Показать по:
+											</div>
+											<select class="pugin-row__select form-control form-select">
+												<option>30</option>
+												<option>20</option>
+												<option>10</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sCategory-->
+				<!-- start sSeo-->
+				<section class="sSeo section" id="sSeo">
+					<div class="container">
+						<div class="section-title text-center text-lg-start">
+							<h2>SEO-заголовок</h2>
+						</div>
+						<div class="sSeo__txt">
+							<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."</p>
+							<p>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
+							<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."</p>
+						</div>
+					</div>
+				</section>
+				<!-- end sSeo-->
+				<footer class="footer section">
+					<div class="footer__container container">
+						<div class="footer__row footer__row--top row align-items-center">
+							<div class="footer__logo-col col-12 col-lg"><a class="footer__logo" href="#"><span class="footer__l-img"><img loading="lazy" src="img/svg/logo.svg" alt=""/></span><span class="footer__l-txt">
+								Эксклюзивные
+								<br class="d-lg-none"/>бизнес-сувениры</span></a>
+							</div>
+							<div class="col-auto"><a class="top-strip__mail" href="mailto:info@domain.ru">info@domain.ru</a></div>
+							<div class="col-auto"><a class="top-strip__tel" href="tel:+74955405586">+7 495 540 55 86</a></div>
+							<div class="col-auto"><a class="top-strip__callback" href="#">Заказать звонок</a></div>
+						</div>
+						<div class="footer__row row">
+							<div class="col d-none d-lg-block">
+								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Статьи</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-auto"><a class="footer__policy" href="#">Политика конфиденциальности</a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta at blanditiis error quis incidunt ratione. Expedita ullam repellendus possimus eos ex quidem quisquam quam voluptatum ipsa doloremque molestias accusamus rem deserunt tenetur incidunt exercitationem laboriosam consequuntur, repudiandae dolore odit earum voluptatibus autem amet! Eligendi omnis necessitatibus at accusamus excepturi, debitis magnam alias. Dolore voluptatum hic assumenda quo non facilis sed sint fugit ex quam. Natus eligendi sequi repellat earum doloremque vero consequatur repudiandae ipsam libero odit alias quia expedita magni fugit perspiciatis aperiam maxime illo, voluptatem omnis tenetur suscipit molestias beatae distinctio totam? Excepturi quaerat dolorum natus reprehenderit voluptas officiis totam recusandae harum autem ipsum laboriosam dolorem, tempore, maxime nam dignissimos aperiam cupiditate accusantium deleniti. Iusto harum facere blanditiis minima dolor assumenda error nisi soluta perferendis animi? Distinctio maxime, perspiciatis neque dignissimos reprehenderit obcaecati quo provident, dolores labore laborum adipisci at veniam reiciendis aliquam nemo minus cumque sequi quasi architecto aliquid magnam tempore expedita? Repellendus veniam est dicta nihil, aspernatur molestiae ducimus quibusdam voluptatibus saepe. Repudiandae itaque rem animi voluptas voluptate? Expedita numquam architecto totam quo quod quibusdam ut, rem earum, similique dolorum excepturi nobis quis, tempore et exercitationem repellendus! Ipsa, consequuntur praesentium quaerat excepturi voluptas, delectus maiores necessitatibus explicabo consequatur neque optio doloremque temporibus similique doloribus pariatur velit aliquam magni cum! Repellat mollitia quam saepe porro, culpa unde! Molestias laboriosam vitae nihil facere corporis cupiditate eos ea saepe dolorem, eaque laudantium quam distinctio, fugit placeat maxime enim dicta rem eligendi accusamus, eum id. Incidunt, illum quaerat ab modi iste quasi non laboriosam unde, atque fugit delectus cumque eligendi sapiente dolore autem omnis alias, adipisci dicta illo corrupti optio? Esse error numquam fugit itaque ipsam fugiat nostrum repudiandae recusandae, nobis repellat aperiam officiis labore possimus neque velit, a obcaecati illum quasi suscipit veritatis! Ea earum obcaecati impedit possimus adipisci vitae animi commodi consequatur omnis amet? Quod sed doloremque id nesciunt iure recusandae iste voluptatibus unde eligendi porro nulla architecto voluptates quasi temporibus, fugit asperiores quis! Facere non, illo quisquam cumque voluptate earum voluptatem corporis eum cum commodi omnis autem sequi nisi sit iure aperiam iusto dolor harum? Ex eligendi vero reiciendis culpa ipsa suscipit debitis, quam earum maxime. Nemo officia quasi consequuntur velit rem culpa ipsa quas earum excepturi amet fuga eum consequatur, repellendus commodi facere maxime. Magni voluptas consequatur facere dolores ut culpa, expedita fugit? Quae placeat asperiores est, fuga eligendi eius similique necessitatibus explicabo? Eveniet corporis tempora reiciendis, dolore ipsam quos aut ea alias amet nihil? Excepturi maiores mollitia inventore voluptate est ullam reprehenderit itaque iure quasi non molestias, vel veniam alias! Obcaecati laudantium ex incidunt autem ipsam a suscipit, in dolorem error deserunt minima laborum nulla facere officia sunt. Aliquid repellat rem sunt reprehenderit. Fugit perferendis officiis labore nesciunt pariatur optio minima aperiam et similique maxime odio laudantium eligendi deleniti culpa exercitationem impedit, fugiat magni vero temporibus eos obcaecati esse possimus asperiores dolores! Quod iure eius minus adipisci? Architecto sapiente corrupti error! Magni ea tempore laboriosam minus totam facilis iure voluptates nostrum officiis dignissimos nihil necessitatibus quam in, commodi molestiae expedita facere asperiores ad! Corporis delectus magnam, vel aspernatur rem laboriosam autem soluta aliquam iure impedit? Deserunt ad nam excepturi, quibusdam qui nisi necessitatibus, voluptatibus deleniti quo cumque ipsam cum repudiandae impedit in a laborum dignissimos ratione labore vitae officia quaerat magnam. Saepe ullam omnis harum reprehenderit beatae pariatur est? Animi dolores necessitatibus corrupti velit architecto obcaecati doloremque vero sapiente quaerat praesentium? Veniam illum iusto ea sunt deserunt, omnis consequatur est adipisci aliquid magnam quibusdam animi debitis magni excepturi accusamus vel facilis ipsa blanditiis expedita cumque fugiat! Aspernatur voluptatum quos corrupti blanditiis? Sapiente pariatur sunt culpa nesciunt consequatur eaque veritatis laborum possimus, saepe at nam amet exercitationem assumenda temporibus illo aliquid asperiores quae impedit beatae voluptatem? Vitae, totam quos odio nobis perferendis unde! Voluptates voluptatum, sint iure aliquid quis quod voluptatem saepe et similique, repellendus dolorum. Sed vel illo quisquam cum aut, ullam impedit quaerat a odit alias fugit repudiandae. Consequuntur voluptas explicabo eligendi, beatae esse nihil laborum illo rerum ab dolorum nemo iste est doloremque magnam. Repellendus in voluptates cumque ullam, cum odio quam deserunt optio doloremque modi nobis itaque cupiditate ea, neque exercitationem laborum, obcaecati mollitia earum debitis accusamus nisi dolorem autem libero dicta! Atque ad doloribus distinctio cumque nobis labore placeat? Necessitatibus, accusamus deleniti numquam asperiores distinctio tempora consectetur minus veritatis cum repellat architecto voluptatibus minima omnis aliquam fugit maiores eos veniam consequatur, rerum ex illo facere? Suscipit distinctio qui quae asperiores voluptates nobis unde, nisi soluta natus aspernatur tempore libero, nam iure? Modi, explicabo iusto tenetur placeat praesentium, sunt voluptatum soluta reiciendis quam atque hic dolorum in, esse consequuntur voluptate animi doloremque saepe expedita voluptates? Consectetur sint assumenda quaerat deleniti. Exercitationem, quas beatae. Ut ipsam eum nisi fugiat numquam saepe tempore dolorem necessitatibus consequatur, voluptatem eligendi magni laborum nostrum sed accusamus ducimus laudantium minus animi. Totam expedita vero voluptas libero ipsa! Facilis ullam vel libero aliquam sit itaque quasi delectus a rerum laborum, possimus, eos inventore nulla, excepturi exercitationem aliquid unde porro. Odio nulla labore repellat exercitationem cupiditate voluptates, obcaecati asperiores eligendi delectus commodi deserunt provident sit nam praesentium culpa cum amet explicabo, nisi dolores? Recusandae provident veritatis porro corporis voluptatem assumenda necessitatibus at. Sint quam in facere nihil hic cupiditate porro sapiente nisi, et ratione placeat commodi unde excepturi error repellat earum perspiciatis quisquam amet tempora. Expedita, ipsum? Molestias mollitia voluptatum sapiente inventore, perspiciatis ab laudantium, voluptatibus amet aliquid laborum autem? Adipisci aliquid voluptatum numquam quas quia ullam error sed illo, sit minima, consectetur temporibus unde? Rerum minima necessitatibus est expedita assumenda nesciunt, modi ea fugiat consectetur ad corporis velit ducimus quia aut cumque iusto voluptatibus et perferendis ipsum! Excepturi perferendis veritatis cumque quo, quod facere facilis impedit magnam numquam repellat ad tempora! Pariatur distinctio laborum, quaerat dolorem nostrum totam animi. Ipsa distinctio consectetur explicabo culpa, esse reprehenderit eveniet obcaecati, repudiandae dolorum vero expedita modi exercitationem iure aut provident sit cum adipisci consequatur id delectus voluptatum fuga ducimus natus. Cum, aperiam impedit error illo hic similique quo iure omnis ullam sapiente modi.</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__polite">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.slim.min.js"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

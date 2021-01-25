@@ -1,0 +1,41 @@
+// start .sPolicy
+.sPolicy {
+	--sPT: 0;
+
+	--sTPB: 38px;
+	--sPB: 60px;
+	@include media-breakpoint-up(lg){
+		--sTPB: 36px;
+		--sPB: 82px;
+	}
+
+	.breadcrumb{
+
+		margin: 28px 0 13px;
+		@include media-breakpoint-up(lg){
+			margin: 18px 0 0px;
+		}
+	}
+	.section-title{
+		h1{
+			@include media-breakpoint-up(ss){
+				font-size: 36px;
+				line-height: (45/36);
+			}
+		}
+	}
+	&__policy{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			margin-bottom: 24px;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sPolicy
