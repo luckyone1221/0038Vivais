@@ -16,8 +16,17 @@
       @include roww(36px);
     }
   }
+  &__catalog-col{
+    @include media-breakpoint-up(xl){
+      position: relative;
+    }
+  }
   //catalog-btn
   &__catalog-btn{
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+
     @extend .btn;
     @extend .btn-primary;
 
@@ -27,6 +36,23 @@
     text-align: center;
 
     padding: 13px 24px;
+
+    &.active{
+      .top-nav__c-burger{
+        span{
+          background-color: transparent;
+        }
+        span:before{
+          top: 0;
+          transform: rotate(-45deg);
+        }
+        span:after{
+          top: 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
   }
   &__c-burger{
     width: 20px;
@@ -37,6 +63,7 @@
     span,
     span:before,
     span:after{
+      @include mt();
       content: '';
       width: 20px;
       height: 2px;
@@ -331,23 +358,39 @@
 
 //catPP
 .catPP{
-  //@include mt();
-  position: fixed;
-  z-index: 999;
-  top: 0;
+  @include media-breakpoint-up(xl){
+    position: absolute;
+    top: calc(100% + 20px);
+    height: auto;
+    max-height: calc(95vh - 20px - var(--HeadHeight));
 
-  left: -120vw;
-  opacity: 0;
-  transition: left .3s ease-in-out .3s, opacity .3s ease-in-out;
-  &.active{
-    left: 0;
-    opacity: 1;
-    transition: left .3s ease-in-out, opacity .3s ease-in-out .3s;
+    left: -120vw;
+    opacity: 0;
+    transition: left .3s ease-in-out .3s, opacity .3s ease-in-out;
+    &.active{
+      left: 18px;
+      opacity: 1;
+      transition: left .3s ease-in-out, opacity .3s ease-in-out .3s;
+    }
   }
+  @include media-breakpoint-down(xl){
+    position: fixed;
+    z-index: 999;
+    top: 0;
 
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba($black, .5);
+    left: -120vw;
+    opacity: 0;
+    transition: left .3s ease-in-out .3s, opacity .3s ease-in-out;
+    &.active{
+      left: 0;
+      opacity: 1;
+      transition: left .3s ease-in-out, opacity .3s ease-in-out .3s;
+    }
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($black, .5);
+  }
 
   &__box{
     background-color: $white;
@@ -358,6 +401,13 @@
       width: 400px;
     }
     overflow: auto;
+
+    @include media-breakpoint-up(xl){
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid $gray-250;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    }
 
   }
   &__head{
@@ -386,6 +436,12 @@
     color: $body-color;
     &:hover{
       color: $primary;
+    }
+
+    &:last-child{
+      @include media-breakpoint-up(xl){
+        border-bottom: 0;
+      }
     }
   }
   &__{}

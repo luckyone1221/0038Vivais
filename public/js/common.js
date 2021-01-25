@@ -245,10 +245,9 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '012-576.png';
+	screenName = '03.png';
 
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
+	if (screenName && x.includes("localhost:30")) {//document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	} //luckyone Js
 
 
@@ -293,23 +292,46 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
-	}); //
+	}); //catPP js
 
 	$('.catPP-btn-js').click(function () {
+		event.stopPropagation();
 		$('.catPP--js').toggleClass('active');
+		$('.catPP-btn-js').toggleClass('active');
 		$('body').toggleClass('fixed2');
 	});
 	$('.close-catPP-js').click(function () {
-		$('.catPP--js').removeClass('active');
-		$('body').removeClass('fixed2');
+		closeCatPP();
 	});
+
+	function closeCatPP() {
+		$('.catPP--js').removeClass('active');
+		$('.catPP-btn-js').removeClass('active');
+		$('body').removeClass('fixed2');
+	}
+
 	$('.catPP--js').click(function () {
 		var target = event.target;
 
 		if (target && target.classList.contains('catPP--js')) {
-			$('.catPP--js').removeClass('active');
-			$('body').removeClass('fixed2');
+			closeCatPP();
 		}
+	}); //cat pp missClick
+
+	document.body.addEventListener('click', function () {
+		var target = event.target;
+
+		if (!target.closest('.catPP--js') && !target.classList.contains('catPP-btn-js')) {
+			closeCatPP();
+		}
+	}); // close on scroll
+
+	window.addEventListener('scroll', function () {
+		if (window.matchMedia("(min-width: 1200px)").matches) {
+			closeCatPP();
+		}
+	}, {
+		passive: true
 	}); //02 category js
 
 	$('.catBar-head-js').click(function () {
@@ -345,53 +367,36 @@ function eventHandler() {
 		yandexScript.setAttribute('type', 'text/javascript');
 		document.body.appendChild(yandexScript);
 		window.setTimeout(function () {
-			ymaps.ready(function () {
-				var myMap = new ymaps.Map('map', {
-					center: [55.832161, 37.650541],
-					zoom: 16
-				}, {
-					searchControlProvider: 'yandex#search'
-				}),
-						// Создаём макет содержимого.
-				MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'),
-						myPlacemark = new ymaps.Placemark([55.832161, 37.650541], {
-					hintContent: 'Мeсто конференции',
-					balloonContent: '«Прибалтийская Park Inn»'
-				}, {
-					// Опции.
-					// Необходимо указать данный тип макета.
-					iconLayout: 'default#image',
-					// Своё изображение иконки метки.
-					iconImageHref: 'img/svg/map-mark.svg',
-					// Размеры метки.
-					iconImageSize: [48, 48],
-					// Смещение левого верхнего угла иконки относительно
-					// её "ножки" (точки привязки).
-					//iconImageOffset: [-24, -48]
-					iconImageOffset: [-24, -48]
-				}),
-						myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-					hintContent: 'Собственный значок метки с контентом',
-					balloonContent: 'А эта — новогодняя',
-					iconContent: '12'
-				}, {
-					// Опции.
-					// Необходимо указать данный тип макета.
-					iconLayout: 'default#imageWithContent',
-					// Своё изображение иконки метки.
-					iconImageHref: 'images/ball.png',
-					// Размеры метки.
-					iconImageSize: [48, 48],
-					// Смещение левого верхнего угла иконки относительно
-					// её "ножки" (точки привязки).
-					iconImageOffset: [-24, -24],
-					// Смещение слоя с содержимым относительно слоя с картинкой.
-					iconContentOffset: [15, 15],
-					// Макет содержимого.
-					iconContentLayout: MyIconContentLayout
+			try {
+				ymaps.ready(function () {
+					var myMap = new ymaps.Map('map', {
+						center: [55.832161, 37.650541],
+						zoom: 16
+					}, {
+						searchControlProvider: 'yandex#search'
+					}),
+							// Создаём макет содержимого.
+					MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'),
+							myPlacemark = new ymaps.Placemark([55.832161, 37.650541], {
+						hintContent: 'Наш офис',
+						balloonContent: 'Москва, Проспект Мира , д. 131, оф. 3'
+					}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: 'img/svg/map-mark.svg',
+						// Размеры метки.
+						iconImageSize: [48, 48],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						//iconImageOffset: [-24, -48]
+						iconImageOffset: [-24, -48]
+					});
+					myMap.geoObjects.add(myPlacemark);
+					myMap.behaviors.disable('scrollZoom');
 				});
-				myMap.geoObjects.add(myPlacemark).add(myPlacemarkWithContent);
-			});
+			} catch (_unused) {}
 		}, 1000);
 	}, 2000); //end luckyone Js
 	// modal window

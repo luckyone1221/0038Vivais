@@ -5,8 +5,8 @@
 		<title>09-1-search</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
@@ -28,7 +28,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="catPP catPP--js">
+				<div class="catPP catPP--js d-xl-none">
 					<div class="catPP__box catPP__box--js">
 						<div class="catPP__head close-catPP-js">
 							<svg class="icon icon-cross ">
@@ -74,7 +74,18 @@
 					<div class="top-nav block-with-lazy">
 						<div class="container">
 							<div class="top-nav__row row align-items-center">
-								<div class="col-auto d-none d-lg-block">
+								<div class="top-nav__catalog-col col-auto d-none d-lg-block">
+									<div class="catPP catPP--js">
+										<div class="catPP__box catPP__box--js">
+											<div class="catPP__head close-catPP-js">
+												<svg class="icon icon-cross ">
+													<use xlink:href="img/svg/sprite.svg#cross"></use>
+												</svg>
+											</div>
+											<div class="catPP__items"><a class="catPP__item" href="#">Сладкие наборы</a><a class="catPP__item" href="#">Наборы с электроникой</a><a class="catPP__item" href="#">Печатная продукция</a><a class="catPP__item" href="#">Наборы с алкоголем</a><a class="catPP__item" href="#">Ежедневники</a><a class="catPP__item" href="#">Блокноты</a><a class="catPP__item" href="#">Одежда</a><a class="catPP__item" href="#">Аксессуары</a>
+											</div>
+										</div>
+									</div>
 									<button class="top-nav__catalog-btn catPP-btn-js">
 										<div class="top-nav__c-burger"><span></span>
 										</div>

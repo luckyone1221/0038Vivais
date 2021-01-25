@@ -25,11 +25,10 @@ html{
 }
 
 body {
-	// min-width: 320px; 
-	-webkit-font-smoothing: antialiased;
-	position: relative;
+	min-width: 576px;
 	overflow-x: hidden;
-	
+	position: relative;
+
 	&.loaded_hiding {
 		@include mt;
 
@@ -84,12 +83,14 @@ body {
 	}
 
 	&.fixed2{
-		overflow: hidden;
-		position: absolute;
-		width: 100%;
-		left: 0;
-		top: 0;
-		z-index: 999;
+		@include media-breakpoint-down(xl){
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: 999;
+		}
 	}
 
 }

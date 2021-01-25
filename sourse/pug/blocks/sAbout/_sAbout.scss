@@ -60,7 +60,7 @@
 	}
 	&__sm-img{
 		width: 100%;
-		@extend .accept-ratio-frame-nh;
+		@extend .accept-ratio-frame;
 		padding-top: (96/170) * 100%;
 	}
 	//

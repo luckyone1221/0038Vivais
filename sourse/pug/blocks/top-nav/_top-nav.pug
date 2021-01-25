@@ -12,7 +12,8 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row.align-items-center
-				.col-auto.d-none.d-lg-block
+				+e.catalog-col.col-auto.d-none.d-lg-block
+					+catalogPP('')
 					+e.BUTTON.catalog-btn.catPP-btn-js
 						+e.c-burger
 							span
@@ -59,8 +60,8 @@ mixin search()
 			+icon('search')
 		+e.INPUT.inp(type="text" placeholder="Поиск по названию товара" )
 
-mixin catalogPP()
-	+b.catPP--js
+mixin catalogPP(addClasses='d-xl-none')
+	+b.catPP--js(class=addClasses)
 		+e.box--js
 			+e.head.close-catPP-js
 				+icon('cross')
