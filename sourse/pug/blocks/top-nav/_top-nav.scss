@@ -20,11 +20,21 @@
     @include media-breakpoint-up(xl){
       position: relative;
     }
+
+    --ddLeft: -120vw;
+    --ddOpacity: 0;
+    &:hover{
+      --ddLeft: 18px;
+      --ddOpacity: 1;
+    }
   }
   //catalog-btn
   &__catalog-btn{
     @include media-breakpoint-down(lg){
       display: none;
+    }
+    @include media-breakpoint-up(xl){
+      pointer-events: none ;
     }
 
     @extend .btn;
@@ -38,17 +48,19 @@
     padding: 13px 24px;
 
     &.active{
-      .top-nav__c-burger{
-        span{
-          background-color: transparent;
-        }
-        span:before{
-          top: 0;
-          transform: rotate(-45deg);
-        }
-        span:after{
-          top: 0;
-          transform: rotate(45deg);
+      @include media-breakpoint-down(xl){
+        .top-nav__c-burger{
+          span{
+            background-color: transparent;
+          }
+          span:before{
+            top: 0;
+            transform: rotate(-45deg);
+          }
+          span:after{
+            top: 0;
+            transform: rotate(45deg);
+          }
         }
       }
     }
@@ -273,7 +285,7 @@
 
     color: $gray-550;
     &:hover{
-      color: $primary;
+      color: $white;
     }
   }
   &__tel{
@@ -284,7 +296,7 @@
 
     color: $white;
     &:hover{
-      color: $primary;
+      color: $white;
     }
   }
   &__callback{
@@ -294,13 +306,14 @@
     line-height: (18/14);
 
     color: $primary;
+    border-bottom: 2px solid currentColor;
+
     &:hover{
-      color: $white;
+      border-bottom: 2px solid transparent;
     }
 
     padding: 1px 0;
     border-top: 2px solid transparent;
-    border-bottom: 2px solid currentColor;
   }
 
   &__catalog-btn{
@@ -360,18 +373,14 @@
 .catPP{
   @include media-breakpoint-up(xl){
     position: absolute;
-    top: calc(100% + 20px);
+    top: calc(100%);
+    padding-top: 20px;
     height: auto;
     max-height: calc(95vh - 20px - var(--HeadHeight));
 
-    left: -120vw;
-    opacity: 0;
-    transition: left .3s ease-in-out .3s, opacity .3s ease-in-out;
-    &.active{
-      left: 18px;
-      opacity: 1;
-      transition: left .3s ease-in-out, opacity .3s ease-in-out .3s;
-    }
+    left: var(--ddLeft);
+    opacity: var(--ddOpacity);
+    transition: left .2s ease-in-out .2s, opacity .2s ease-in-out;
   }
   @include media-breakpoint-down(xl){
     position: fixed;

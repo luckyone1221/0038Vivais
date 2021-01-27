@@ -39,6 +39,15 @@
 	border-radius: 12px;
 	overflow: hidden;
 
+	@include mt();
+	--titleColor: #{$body-color};
+	--titleTD: none;
+	&:hover{
+		--titleColor: #{$primary};
+		--titleTD: underline;
+		box-shadow: 0px 5px 15px rgba($primary, .32);
+	}
+
 	&__img{
 		@extend .accept-ratio-frame;
 
@@ -62,9 +71,11 @@
 		display: block;
 		font-weight: bold;
 
-		color: $body-color;
+		color: var(--titleColor);
+		text-decoration: var(--titleTD);
 		&:hover{
 			color: $primary;
+			text-decoration: underline;
 		}
 
 		margin-bottom: 17px;

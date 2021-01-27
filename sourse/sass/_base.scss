@@ -670,3 +670,13 @@ a{
 		object-fit: cover;
 	}
 }
+
+//remove outline from btns
+.btn{
+	box-shadow: none!important;
+}
+//select
+.form-select{
+	cursor: pointer;
+	box-shadow: none!important;
+}
