@@ -21,10 +21,10 @@
       position: relative;
     }
 
-    --ddLeft: -120vw;
+    --ppScaleY: 0;
     --ddOpacity: 0;
     &:hover{
-      --ddLeft: 18px;
+      --ppScaleY: 1;
       --ddOpacity: 1;
     }
   }
@@ -378,9 +378,10 @@
     height: auto;
     max-height: calc(95vh - 20px - var(--HeadHeight));
 
-    left: var(--ddLeft);
+    transform-origin: top;
+    transform: scaleY(var(--ppScaleY));
     opacity: var(--ddOpacity);
-    transition: left .2s ease-in-out .2s, opacity .2s ease-in-out;
+    @include mt();
   }
   @include media-breakpoint-down(xl){
     position: fixed;
