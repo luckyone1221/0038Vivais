@@ -14,7 +14,11 @@ mixin top-nav()
 			+e.row.row.align-items-center
 				+e.catalog-col.col-auto.d-none.d-lg-block
 					+catalogPP('')
-					+e.BUTTON.catalog-btn.catPP-btn-js
+					+e.BUTTON.catalog-btn.catPP-btn-js.d-xl-none
+						+e.c-burger
+							span
+						+e.txt Каталог
+					+e.BUTTON.catalog-btn.d-none.d-xl-flex
 						+e.c-burger
 							span
 						+e.txt Каталог
