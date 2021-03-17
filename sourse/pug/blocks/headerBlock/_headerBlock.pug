@@ -5,7 +5,7 @@ mixin headerBlock()
 			.swiper-container.baner-slider-js
 				.swiper-wrapper
 					+headerSlide(1)
-					+headerSlide(1)
+					+headerSlide(2, 'jpg')
 					+headerSlide(1)
 					+headerSlide(1)
 			.container
@@ -19,13 +19,13 @@ mixin headerBlock()
 				+b.baner-pugin--js.d-md-flex.d-none
 	// end headerBlock
 
-mixin headerSlide(imgNum)
+mixin headerSlide(imgNum, format='png')
 	.swiper-slide
 		.container
 			+e.row.row.align-items-center
 				.col-12.col-lg-6.col-xl-auto
 					+e.img
-						img.swiper-lazy(src="" data-src=`img/@2x/head-slide-${imgNum}.png` alt="")
+						img.swiper-lazy(src="" data-src=`img/@2x/head-slide-${imgNum}.${format}` alt="")
 				.col
 					+e.content.text-center.text-lg-start
 						h2 Новогодние скидки до 60%

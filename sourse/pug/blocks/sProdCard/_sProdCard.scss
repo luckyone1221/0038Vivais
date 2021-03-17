@@ -1,5 +1,10 @@
 // start .sProdCard
 .sProdCard {
+	--thumbIW: 80px;
+	@include media-breakpoint-up(lg){
+		--thumbIW: 72px;
+	}
+
 	--sPT: 0;
 
 	--sPB: 50px;
@@ -30,11 +35,6 @@
 
 	//sliders
 	&__slider-row{
-		--thumbIW: 80px;
-		@include media-breakpoint-up(lg){
-			--thumbIW: 72px;
-		}
-
 		flex-wrap: nowrap;
 	}
 
@@ -216,7 +216,10 @@
 	}
 	//descr
 	&__descr{
-
+		//padding-left: calc(var(--thumbIW) + 12px);
+		@include media-breakpoint-up(lg){
+			padding-left: calc(var(--thumbIW) + 24px);
+		}
 	}
 	&__d-header{
 		font-weight: bold;
