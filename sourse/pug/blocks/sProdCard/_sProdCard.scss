@@ -152,7 +152,12 @@
 
 
 	&__content-col{
-
+		@include media-breakpoint-between(sm, md){
+			padding-left: calc(var(--thumbIW) + 18px);
+		}
+		@include media-breakpoint-between(md, lg){
+			padding-left: calc(var(--thumbIW) + 36px);
+		}
 	}
 	//.section-title
 	.section-title{
@@ -216,8 +221,10 @@
 	}
 	//descr
 	&__descr{
-		//padding-left: calc(var(--thumbIW) + 12px);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(sm){
+			padding-left: calc(var(--thumbIW) + 12px);
+		}
+		@include media-breakpoint-up(md){
 			padding-left: calc(var(--thumbIW) + 24px);
 		}
 	}
